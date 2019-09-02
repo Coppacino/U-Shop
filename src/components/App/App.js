@@ -1,16 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navigation from '../Navigation';
-import LandingPage from '../Landing';
-import SignUpPage from '../SignUp';
-import SignInPage from '../SignIn';
-import PasswordForgetPage from '../PasswordForget';
-import HomePage from '../Home';
-import AccountPage from '../Account';
+import Navigation from '../Navigation/Navigation';
+import LandingPage from '../Landing/Landing';
+import SignUpPage from '../SignUp/SignUp';
+import SignInPage from '../SignIn/Login';
+import PasswordForgetPage from '../PasswordForget/PasswordForget';
+import HomePage from '../Home/HomePage';
+import AccountPage from '../Account/Account';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
+//import TodoList from '../To-do/TodoList.js';
+
+//import TodoList from './components/To-do';
 
 const App = () => (
+  
   <Router>
     <div>
       <Navigation />
@@ -23,6 +27,7 @@ const App = () => (
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
     </div>
   </Router>
+  
 );
 
 export default withAuthentication(App);
