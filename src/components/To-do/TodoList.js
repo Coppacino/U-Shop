@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import TodoItems from './TodoItems';
 import "./TodoList.css";
 
+
 class TodoList extends Component{
     constructor(props){
        
@@ -14,12 +15,10 @@ class TodoList extends Component{
         this.deleteItem = this.deleteItem.bind(this);
     }
 
-    trim1 (str) {
-        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-    }
+    
     
     addItem(e){
-        e = this.trim1(e);
+        
         if(this._inputElement.value !== ""){
             let newItem = {
                 text: this._inputElement.value,
@@ -74,4 +73,7 @@ class TodoList extends Component{
     }
 }
 
+
+
 export default TodoList;
+
