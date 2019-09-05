@@ -73,7 +73,12 @@ class TodoList extends Component{
     }
 }
 
-
+const liste = {
+    list: [
+        <TodoList ></TodoList>
+    ]
+}
 
 export default TodoList;
+export {liste}
 

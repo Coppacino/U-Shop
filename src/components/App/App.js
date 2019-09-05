@@ -9,7 +9,6 @@ import HomePage from '../Home/HomePage';
 import AccountPage from '../Account/Account';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
-import LIST from '../To-do/TodoList.js';
 
 //import TodoList from '../To-do/TodoList.js';
 
@@ -27,7 +26,6 @@ const App = () => (
       <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route exact path={ROUTES.LIST} component={LIST} />
     </div>
   </Router>
   
