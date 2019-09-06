@@ -46,7 +46,7 @@ class App extends Component {
             <HashRouter>
                 <center className="App">
                     <div className="App-header">
-                        <h1>U-SHOP</h1>
+                        <h1 style ={{color: 'black'}}>U-SHOP</h1>
                     </div>
 
                     <nav className="navbar navbar-default navbar-static-top">

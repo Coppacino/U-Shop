@@ -2,20 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: rgb(212, 247, 253)
+    background-color: rgb(212, 247, 253);
 }
 
 .App {
     text-align: left;
 }
 
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-}
-
 .App-header {
-    background-color: #222;
+    background-color: rgb(212, 247, 253);
     height: 100px;
     padding: 20px;
     color: white;

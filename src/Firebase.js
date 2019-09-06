@@ -1,6 +1,3 @@
-/**
- * Created by bikramkawan on 9/1/17.
- */
 import * as firebase from 'firebase';
 
 // Initialize Firebase

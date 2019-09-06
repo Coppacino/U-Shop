@@ -1,6 +1,3 @@
-/**
- * Created by bikramkawan on 9/1/17.
- */
 import React, {Component} from 'react';
 import {firebaseApp, providerGoogle, providerFacebook} from '../Firebase';
 import { GoogleLoginButton } from "react-social-login-buttons";
@@ -21,24 +18,7 @@ class Login extends Component {
         }
     }
 
-    mergeRealTimeDb() {
-        const rootUtente = firebaseApp.database().ref("users/" + this.state.userAuthProvider.uid)
-        rootUtente.on("value", snap => {
-          if (snap.val() === null) {
-            rootUtente.set({
-              name: this.state.name,
-              email: this.state.userAuthProvider.email,
-              role: this.state.role
-            }).then((data) => {
-              console.log('data ', data)
-            }).catch((error) => {
-              console.log('error ', error)
-            })
-            console.log(this.state.userAuthProvider.displayName, this.state.userAuthProvider.uid)
-          }
-        });
     
-      }
 
     authGoogleProvider() {
         firebaseApp.auth().signInWithPopup(providerGoogle)
@@ -47,7 +27,6 @@ class Login extends Component {
               userAuthProvider: result.user,
               name: result.user.displayName
             })
-            //this.mergeRealTimeDb()  //aggiungo l'utente al db
           })
           .catch((error) => {
             if (error.code === 'auth/account-exists-with-different-credential') {
@@ -63,7 +42,6 @@ class Login extends Component {
               userAuthProvider: result.user,
               name: result.user.displayName
             })
-            //this.mergeRealTimeDb()  //aggiungo l'utente al db
           })
           .catch((error) => {
             if (error.code === 'auth/account-exists-with-different-credential') {
@@ -86,13 +64,11 @@ class Login extends Component {
                     <input type="text"
                            placeholder="Inserisci Email"
                            className="form-control"
-                           //style={{marginLeft: '125px', width: '300px'}}
                            onChange={({target})=>this.setState({email: target.value})}
                     />
                     <input type="password"
                            placeholder="Inserisci Password"
                            className="form-control"
-                           //style={{marginLeft: '125px', marginTop: '10px'}}
                            onChange={({target})=>this.setState({password: target.value})}
                     />
                     

@@ -1,6 +1,3 @@
-/**
- * Created by bikramkawan on 9/1/17.
- */
 import React, {Component} from 'react';
 import {usersWishlist} from '../Firebase'
 
